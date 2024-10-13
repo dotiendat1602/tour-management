@@ -80,8 +80,6 @@ export const detail = async (req: Request, res: Response) => {
 
   tour["price_special"] = (1 - tour["discount"]/100) * tour["price"];
   tour["price_special"] = parseInt(tour["price_special"]);
-
-  console.log(tour);
   
   res.render("client/pages/tours/detail", {
     pageTitle: "Chi tiết tour",

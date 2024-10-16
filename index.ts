@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import sequelize from "./config/database";
 sequelize;
+import bodyParser from "body-parser";
 
 import { routesClient } from "./routes/client/index.route";
 
@@ -13,6 +14,9 @@ app.set("views", "./views");
 app.set("view engine", "pug");
 
 app.use(express.static("public"));
+
+// parse application/json
+app.use(bodyParser.json());
 
 routesClient(app);
 

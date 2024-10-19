@@ -28,7 +28,7 @@ export const listJson = async (req: Request, res: Response) => {
 
         if(infoTour["images"]) {
             infoTour["images"] = JSON.parse(infoTour["images"]);
-            tour["images"] = infoTour["images"][0];
+            tour["image"] = infoTour["images"][0];
         }
 
         tour["title"] = infoTour["title"];
